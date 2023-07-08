@@ -1,0 +1,36 @@
+button[type="submit"] {
+  background-color:  #4056A1 ;
+  border: none;
+  color: white;
+  padding: 15px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  font-family: 'Bungee';
+}
+
+.counter {
+  font-family: 'Bungee';
+  position: relative;
+}
+
+.button-char {
+  display: flex;
+  gap: 20em;
+}
+
+.prompt {
+  display: flex;
+  flex-direction: column;
+}
+
+.horizonLine {
+  border-bottom: 5px solid #000000;
+}
+
+#tweet-text {
+  background-color: #f4f1ec;
+  border: none;
+  outline: none;
+}

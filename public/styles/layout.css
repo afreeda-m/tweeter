@@ -33,4 +33,6 @@ nav {
   width: 90%;
   margin: 0 auto;
   background-color: #f4f1ec;
+  display: flex;
+  justify-content: center;
  }
