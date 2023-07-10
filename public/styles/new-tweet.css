@@ -17,6 +17,7 @@ button[type="submit"] {
 
 .button-char {
   display: flex;
+  justify-content: space-between;
   gap: 20em;
 }
 
