@@ -29,10 +29,11 @@ nav {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
- main {
-  width: 90%;
+main {
+  border: 90%;
   margin: 0 auto;
+  padding: 20px;
   background-color: #f4f1ec;
   display: flex;
   justify-content: center;
- }
+}
