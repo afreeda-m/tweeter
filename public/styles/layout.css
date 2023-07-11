@@ -30,10 +30,6 @@ nav {
  */
 
 main {
-  border: 90%;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #f4f1ec;
-  display: flex;
-  justify-content: center;
+  width: 90%;
+  margin: 1em auto;
 }

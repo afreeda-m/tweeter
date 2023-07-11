@@ -7,18 +7,13 @@ button[type="submit"] {
   text-decoration: none;
   display: inline-block;
   font-size: 20px;
-  font-family: 'Bungee';
-}
-
-.counter {
-  font-family: 'Bungee';
-  position: relative;
 }
 
 .button-char {
   display: flex;
   justify-content: space-between;
-  gap: 20em;
+  align-items: center;
+  font-family: 'Bungee';
 }
 
 .prompt {
@@ -34,4 +29,5 @@ button[type="submit"] {
   background-color: #f4f1ec;
   border: none;
   outline: none;
+  resize: none;
 }
