@@ -18,3 +18,8 @@ header {
   height: 520px;
   width: 100%;
 }
+
+header img {
+  width: 250px;
+  height: 250px;
+}

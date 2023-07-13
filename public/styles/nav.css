@@ -10,8 +10,9 @@ nav {
   position: fixed;
 }
 
-nav .span {
+nav span {
   font-family: 'Bungee', sans-serif;
+  font-size: x-large;
 }
 
 #nav-new-tweet {

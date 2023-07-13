@@ -14,6 +14,7 @@ button[type="submit"] {
   justify-content: space-between;
   align-items: center;
   font-family: 'Bungee';
+  padding-bottom: 20px;
 }
 
 .prompt {
@@ -23,6 +24,10 @@ button[type="submit"] {
 
 .horizonLine {
   border-bottom: 5px solid #000000;
+}
+
+.new-tweet {
+  padding-bottom: 30px;
 }
 
 #tweet-text {
