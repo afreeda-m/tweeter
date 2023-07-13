@@ -1,8 +1,9 @@
-.user-tweets {
-  border: solid 5px;;
+article {
+  border: solid 5px;
+  margin: 20px;
 }
 
-.user-tweets:hover {
+article:hover {
   box-shadow: 10px 10px grey;
 }
 
