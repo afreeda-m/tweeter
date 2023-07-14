@@ -48,9 +48,7 @@ $(document).ready(function () {
     }
   }
 
-  const $tweetForm = $(".tweet-form");
-
-  $tweetForm.submit(function(event) {
+  $(".tweet-form").submit(function(event) {
     // Prevent the default pag refresh form submission behavior
     event.preventDefault();
 

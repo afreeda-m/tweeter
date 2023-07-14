@@ -36,3 +36,11 @@ button[type="submit"] {
   outline: none;
   resize: none;
 }
+
+.red {
+  color: red;
+}
+
+.black {
+  color: black;
+}

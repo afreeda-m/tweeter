@@ -8,10 +8,9 @@ $(document).ready(function() {
     $("#current-count").text(currentLengthRemaining);
 
     if (currentLengthRemaining < 0){
-      $("#current-count").css("color", "red");
+      $("#current-count").removeClass("black").addClass("red");
     } else {
-      $("#current-count").css("color", "black");
+      $("#current-count").removeClass("red").addClass("black");
     };
-    
   })
 });
