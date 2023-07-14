@@ -4,33 +4,8 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-// Fake data taken from initial-tweets.json
-const data = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd" },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  }
-];
-
 $(document).ready(function () {
+  // create dynamic tweet element
   const createTweetElement = function (tweet) {
     let $tweet = `<article>
     <header id="user-tweets-header">
@@ -52,7 +27,7 @@ $(document).ready(function () {
 
     <footer class="user-tweets-footer">
       <div>
-        <h5><span>${tweet.created_at} days ago</span></h5>
+        <h5><span><time class="tweet-timeago">${tweet.created_at}</time> days ago</span></h5>
       </div>
       <div class="footer-icons">
         <i class="fa-sharp fa-solid fa-flag"></i>
@@ -65,12 +40,57 @@ $(document).ready(function () {
     return $tweet;
   };
 
+  //loop through all tweet objects and render the individual elements for display
   const renderTweets = function(tweets) {
     for (const tweet of tweets) {
       const tweetElement = createTweetElement(tweet);
-      $(".user-tweets").append(tweetElement);
+      $(".user-tweets").prepend(tweetElement);
     }
   }
 
-  renderTweets(data);
+  const $tweetForm = $(".tweet-form");
+
+  $tweetForm.submit(function(event) {
+    // Prevent the default pag refresh form submission behavior
+    event.preventDefault();
+
+    // Serialize the form data
+    const formData = $(this).serialize();
+
+    // Send an AJAX POST request to the server
+    $.ajax({
+      url: '/tweets',
+      method: 'POST',
+      data: formData,
+      success: function(response) {
+        // Handle the success response
+        console.log('Data sent successfully:', response);
+        loadTweets();
+      },
+      error: function(error) {
+        // Handle the error response
+        console.error('Error sending data:', error);
+      }
+    });
+  });
+
+  const loadTweets = function () {
+    $.ajax({
+      url: '/tweets',
+      method: 'GET',
+      dataType: 'JSON',
+      success: function(response) {
+        $(".user-tweets").empty();
+
+        // If request successful, then show the tweets
+        renderTweets(response);
+      },
+      error: function(error) {
+        console.log('Error loading tweets: ', error);
+      }
+    });
+  }
+
+  loadTweets();
+
 });
