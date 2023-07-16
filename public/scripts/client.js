@@ -20,7 +20,7 @@ $(document).ready(function () {
 
     <div id="tweet-content">
       <p>
-      ${tweet.content.text}
+      ${escape(tweet.content.text)}
       </p>
     </div>
 
@@ -41,9 +41,16 @@ $(document).ready(function () {
     return $tweet;
   };
 
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   //loop through tweet object and render the individual tweets for display
   const renderTweets = function(tweets) {
     $(".user-tweets").empty();
+  
     for (const tweet of tweets) {
       const tweetElement = createTweetElement(tweet);
       $(".user-tweets").prepend(tweetElement);
