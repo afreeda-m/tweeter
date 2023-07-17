@@ -57,6 +57,11 @@ $(document).ready(function () {
     }
   }
 
+  //listen for input to remove error message
+  $("#tweet-text").on('input', function () {
+    $("#empty-error").slideUp();
+  });
+
   // listen for a tweet submit
   $(".tweet-form").submit(function(event) {
     // Prevent the default page refresh form submission behavior
@@ -65,13 +70,16 @@ $(document).ready(function () {
     //validate tweet message for emptiness and character count
     const tweetContent = $("#tweet-text").val();
 
+    $("#empty-error").slideUp();
+    $("#counter-exceeded-error").slideUp();
+
     if (!tweetContent || tweetContent.trim() === ''){
-      alert("Tweet content cannot be empty!");
+      $("#empty-error").slideDown();
       return;
     }
 
     if (tweetContent.length > 140) {
-      alert("Character count is beyond 140 characters!");
+      $("#counter-exceeded-error").slideDown();
       return;
     }
 
