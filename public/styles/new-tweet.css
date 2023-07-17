@@ -37,6 +37,14 @@ button[type="submit"] {
   resize: none;
 }
 
+.tweet-form {
+  padding: 20px;
+}
+
+h2 {
+  padding: 20px;
+}
+
 .red {
   color: red;
 }

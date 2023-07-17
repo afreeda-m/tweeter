@@ -5,6 +5,7 @@
  */
 
 $(document).ready(function () {
+  
   // create HTML tweet element
   const createTweetElement = function (tweet) {
     let $tweet = `<article>
