@@ -15,6 +15,7 @@ html {
  */
 
 body {
+  align-items: center;
   width: 100%;
   color: #545149;
   background-color: #f4f1ec;
@@ -32,4 +33,13 @@ nav {
 main {
   width: 90%;
   margin: 1em auto;
+}
+
+@media only screen and (min-width: 1024px) {
+  body {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-top: 200px;
+  }
 }
