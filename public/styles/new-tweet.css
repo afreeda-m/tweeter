@@ -57,10 +57,16 @@ h2 {
   display: none;
   color: red;
   background-color: #f4f1ec;
+  text-align: center;
+  padding-top: 10px;
+  border: 2px solid red;
 }
 
 #counter-exceeded-error {
   display: none;
   color: red;
   background-color: #f4f1ec;
+  text-align: center;
+  padding-top: 10px;
+  border: 5px solid red;
 }

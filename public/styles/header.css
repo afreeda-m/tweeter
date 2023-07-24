@@ -1,17 +1,15 @@
-header {
-  width: 100%;
-  padding-top: 150px;
-  background-color: #00b0b0;
-  background-image: url("https://www.transparenttextures.com/patterns/arabesque.png");
-  color: white;
-}
-
 .header-container {
+  width: 100%;
+  padding-top: 50px;
+  background-color: #00b0b0;
+  background-image: url("/images/arabesque.png");
+  color: white;
   height: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  flex-grow: 1;
 }
 
 .header-background-image {
@@ -24,4 +22,5 @@ header img {
   height: 250px;
   display: flex;
   align-items: center;
+  justify-content: center;
 }

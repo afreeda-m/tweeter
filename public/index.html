@@ -59,47 +59,47 @@
     </div>
   </nav>
 
-  <header>
-    <div class="header-container">
+  <div class="content">
+    <header class="header-container">
       <div>
           <img src="/images/profile-hex.png"> 
       </div>
       <div>
           <h2>Afreeda</h2>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <!-- Page-specific (main) content here -->
-  <main class="container">
-    <section class="new-tweet">
-      <div id="error-container">
-        <span id="empty-error"> ⚠️ Tweet box cannot be empty when tweeting! Please enter some text</span>
-        <br>
-        <span id="counter-exceeded-error"> ⚠️ Please keep tweet character count within 140 characters.</span>
-      </div>
-      <h2>Compose Tweet</h2>
-      <form action="/tweets" method="POST" class="tweet-form">
-        <div class="prompt">
-          <label for="tweet-text">What are you humming about?</label>
-          <textarea name="text" id="tweet-text"></textarea>
+    <!-- Page-specific (main) content here -->
+    <main class="container">
+      <section class="new-tweet">
+        <div id="error-container">
+          <span id="empty-error"> ⚠️ Tweet box cannot be empty when tweeting! Please enter some text</span>
+          <br>
+          <span id="counter-exceeded-error"> ⚠️ Please keep tweet character count within 140 characters.</span>
         </div>
+        <h2>Compose Tweet</h2>
+        <form action="/tweets" method="POST" class="tweet-form">
+          <div class="prompt">
+            <label for="tweet-text">What are you humming about?</label>
+            <textarea name="text" id="tweet-text"></textarea>
+          </div>
 
-        <hr class="horizonLine">
+          <hr class="horizonLine">
 
-        <br>
+          <br>
 
-        <div class="button-char">
-          <button type="submit" class="tweet-button">Tweet</button>
-          <output name="counter" class="counter" for="tweet-text" id="current-count">140</output>
-        </div>
-      </form>
-    </section>
+          <div class="button-char">
+            <button type="submit" class="tweet-button">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text" id="current-count">140</output>
+          </div>
+        </form>
+      </section>
 
-    <section class="user-tweets">
+      <section class="user-tweets">
 
-    </section>
-  </main>
+      </section>
+    </main>
+  </div>
 </body>
 
 </html>
