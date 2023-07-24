@@ -34,6 +34,7 @@ nav {
 
 main {
   width: 90%;
+  align-items: center;
   margin: 1em auto;
 }
 

@@ -5,7 +5,7 @@
  */
 
 $(document).ready(function () {
-  
+
   // create HTML tweet element
   const createTweetElement = function (tweet) {
     let $tweet = `<article>
@@ -42,6 +42,7 @@ $(document).ready(function () {
     return $tweet;
   };
 
+  // prevent html code inputted in text area from affecting code
   const escape = function (str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
@@ -50,6 +51,7 @@ $(document).ready(function () {
 
   //loop through tweet object and render the individual tweets for display
   const renderTweets = function(tweets) {
+    // empty the container to prevent readding of the same tweets with each new tweet
     $(".user-tweets").empty();
   
     for (const tweet of tweets) {

@@ -1,5 +1,6 @@
 const maxLength = 140;
 
+// implement character counter
 $(document).ready(function() {
   $("#tweet-text").keyup(function(event) {
 
@@ -7,6 +8,7 @@ $(document).ready(function() {
 
     $("#current-count").text(currentLengthRemaining);
 
+    // change CSS properties based on count to indicate count limit exceeded
     if (currentLengthRemaining < 0){
       $("#current-count").removeClass("black").addClass("red");
     } else {
