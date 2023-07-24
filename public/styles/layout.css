@@ -35,7 +35,7 @@ nav {
 main {
   width: 90%;
   align-items: center;
-  margin: 1em auto;
+  margin: auto;
 }
 
 .content {
@@ -59,5 +59,6 @@ main {
 
   .container {
     flex: 2;
+    padding-top: 0px;
   }
 }

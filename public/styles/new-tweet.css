@@ -26,10 +26,6 @@ button[type="submit"] {
   border-bottom: 5px solid #000000;
 }
 
-.new-tweet {
-  padding-bottom: 30px;
-}
-
 #tweet-text {
   background-color: #f4f1ec;
   border: none;
@@ -37,11 +33,12 @@ button[type="submit"] {
   resize: none;
 }
 
-.tweet-form {
-  padding: 20px;
+.question {
+  font-size: 1.25em;
+  font-weight: 500;
 }
 
-h2 {
+.tweet-form {
   padding: 20px;
 }
 
@@ -53,13 +50,19 @@ h2 {
   color: black;
 }
 
+#error-container {
+  display: none;
+}
+
 #empty-error {
   display: none;
   color: red;
   background-color: #f4f1ec;
   text-align: center;
   padding-top: 10px;
+  padding-bottom: 10px;
   border: 2px solid red;
+  margin-top: 25px;
 }
 
 #counter-exceeded-error {
@@ -68,5 +71,7 @@ h2 {
   background-color: #f4f1ec;
   text-align: center;
   padding-top: 10px;
-  border: 5px solid red;
+  padding-bottom: 10px;
+  border: 2px solid red;
+  margin-top: 25px;
 }

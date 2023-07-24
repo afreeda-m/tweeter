@@ -13,17 +13,20 @@ nav {
   position: sticky;
   top: 0;
   left: 0;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 nav span {
   font-family: 'Bungee', sans-serif;
-  font-size: x-large;
+  font-size: xx-large;
 }
 
 #nav-new-tweet {
   font-family: 'Source Sans 3', sans-serif;
   display: flex;
   justify-content: end;
+  font-size: x-large;
 }
 
 .new-tweet-container {
